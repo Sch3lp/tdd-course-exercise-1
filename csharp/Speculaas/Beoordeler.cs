@@ -4,7 +4,7 @@ namespace Speculaas
 {
     public class Beoordeler
     {
-        public static bool BeoordeelSpeculaas(HasseltseSpeculaas speculaas)
+        public static int BeoordeelSpeculaas(HasseltseSpeculaas speculaas)
         {
             throw new NotImplementedException();
         }
