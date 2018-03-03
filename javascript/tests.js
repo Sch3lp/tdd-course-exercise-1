@@ -1,36 +1,36 @@
 
-describe("het beoordelen van een speculaas", function() {
+describe("rating a speculaas", function() {
 
-	it("zou een hoge som moeten zijn voor een Hasseltse speculaas met veel ingrediënten", function() {
+	it("should be a high rating for Hasseltse speculaas with lots of ingredients", function() {
 		var hasseltseSpecuclaas = {
-			boter: 500,
-			bloem: 500,
-			suiker: 1000,
-			kruiden: 10,
-			zout: 10,
-			honing: 20,
-			melk: 100,
-			eieren: 120
+			butter: 500,
+			flower: 500,
+			sugar: 1000,
+			herbs: 10,
+			salt: 10,
+			honey: 20,
+			milk: 100,
+			eggs: 120
 		};
-		var beoordeling = beoordeelSpeculaas(hasseltseSpecuclaas);
+		var rating = rateSpeculaas(hasseltseSpecuclaas);
 
-		expect(beoordeling).toBe(2260);
+		expect(rating).toBe(2260);
 	});
 
-	it("zou een lage som moeten zijn voor speculaas met minder ingredienten", function() {
-		var goedkopeSpeculaas = {
-			boter: 500,
-			bloem: 500,
-			suiker: 500,
-			eieren: 60
+	it("should be a low sum for speculaas with less ingredients", function() {
+		var cheapSpeculaas = {
+			butter: 500,
+			flower: 500,
+			sugar: 500,
+			eggs: 60
 		};
-		var beoordeling = beoordeelSpeculaas(goedkopeSpeculaas);
+		var rating = rateSpeculaas(cheapSpeculaas);
 		
-		expect(beoordeling).toBe(1560);
+		expect(rating).toBe(1560);
 	});
 
-	it("zou het minimum moeten scoren voor speculaas zonder ingredienten", function() {
-		expect(beoordeelSpeculaas({})).toBe(0);
+	it("should be a minimum rating for a speculaas without any ingredients", function() {
+		expect(rateSpeculaas({})).toBe(0);
 	});
 
 });

@@ -1,46 +1,54 @@
 # TDD Lab Exercise 1
 
-Oefeningen voor http://wgroeneveld.github.io/tdd-course
+Exercises for http://sch3lp.github.io/tdd-course
 
-## Technologie
+## Technology
 
-Voorkeur voor Javascript. Test Harnas met Jasmine. [Zie ook Jasmine documentatie](https://jasmine.github.io/).
+Test Harnass with Jasmine. [Jasmine Docs](https://jasmine.github.io/).
 
-Andere talen zijn ook mogelijk, zie submapjes per taal.
+## Assignment
 
-Onderstaande voorbeeld staat in Javascript uitgelegd. 
+### What do I do?
 
-## Opdracht beschrijving
-
-### Wat moet ik doen?
-
-De Artisanale bakkersvereniging vertrouwt op jullie technische kunde om een oplossing te voorzien voor hun probleem. Er wordt veel Hasseltse speculaas gebakken maar niemand weet exact wat nu de béste speculaas is. Schrijf een methode die de speculaas evalueert, gebaseerd op de ingrediënten. De functie ziet er als volgt uit:
+The Artisanal Bakers Association trusts your technical prowess to solve their problem. A lot of _Hasseltse [Speculaas](https://en.wikipedia.org/wiki/Speculaas)_ is being baked, but no one exactly knows what the **best** _Speculaas_ is. Write a method that rates _speculaas_ based on the ingredients. The function should look like this:
 
 ```javascript
-	function beoordeelSpeculaas(speculaas) {
+	function rateSpeculaas(speculaas) {
 		...
 	}
 ```
 
-De functie geeft een getal terug. Hoe hoger het getal, hoe beter de score en hoe blijer de bakker. 
-Het argument, speculaas, kan de volgende properties hebben: kruiden, boter, suiker, eieren, melk, honing, bloem, zout, rijsmiddel. Elke property is een getal dat de hoeveelheid uitdrukt in gram. Bijvoorbeeld:
+This function should return a number. The higher the number, the better the rating and the happier the baker.
+The argument `speculaas` can contain these properties:
+herbs, butter, sugar, eggs, milk, honey, flower, salt, leavening. Each property is simply a number that expresses the amount in grams. For example:
+
 
 ```javascript
 {
-    boter: 250,
-    bloem: 1000,
-    zout: 10,
-    melk: 100
+    butter: 250,
+    flower: 1000,
+    salt: 10,
+    milk: 100
 };
 ```
 
-**Hoe weet ik nu welke speculaas beter scoort?** Tel gewoon alle ingrediënten op. Maak het niet te moeilijk.
+#### So how do I know which _Speculaas_ scores better?
+Keep It Simple Stupid, and just count all the ingredients.
 
-Een voorbeeld van hoe de methode gebruikt kan worden zie je in de test code.
-Source in `exercise.js` typen, testen in `tests.js`.
+You can find example usage of the method in the test.
+
+Put your production code in `exercise.js`, and your tests in `tests.js`.
 
 ### Unit testen
 
-Er zijn reeds een aantal unit testen voorzien. Deze kan je laten lopen door runtests.html in een browser uit te voeren. Kijk gerust naar de testen en vergeet niet om er bij te schrijven wanneer nodig!
+We already supplied some unit tests. You can run these by simply opening a `runtests.html` in a browser.
+Feel free to add your own tests when necessary!
 
-**Wat moet ik nu precies testen?** Wat dacht je van een industriële speculaas zonder kruiden, of eentje met alles er op en er aan? Wat doet je functie indien de speculaas `undefined` of `null` is? Wat doet die indien een speculaas zonder ingrediënten doorgegeven wordt? Alle uitzonderingsgevallen dus zeker behandelen. De nadruk ligt op de testen, niet op de implementatie!
+#### What exactly do I test?
+Well what about industrial _speculaas_ without any herbs, or a recipe that has all the things?
+
+What does your function do when the given `speculaas` argument is `undefined` or `null`?
+
+What if you pass a `speculaas` without any ingredients?
+
+Try to cover all exceptional cases. We want to stress testing, not implementation!
